@@ -1,0 +1,109 @@
+.board-detail {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: #2b2b2b;
+}
+
+.board-main {
+  flex: 3;
+}
+.headdt{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+ .headdt button{
+  background-color: #2b2b2b;
+  border: 0;
+  color: #ffffff;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+.task-grid #o1 button{
+  background-color: #2b2b2b;
+  border: 0;
+  color: #ffffff;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.task-card {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+}
+.task-grid h3{
+  font-size: 20px;
+}
+.task-grid p{
+  font-size: 18px;
+}
+.tag {
+  background: #2b2b2b;
+  color: #ffffff;
+  margin: 2px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tags button {
+  margin-left: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.board-sidebar {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}
+.board-sidebar button{
+    background-color: #2b2b2b;
+  border: 0;
+  color: #ffffff;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000aa;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 999;
+  font-size: 30px;
+  color: #2b2b2b;
+}
+.IAL{
+  display: flex;
+  gap: 5px; 
+  align-items: center;
+  margin-top: 5px;
+}
+.board-sidebar input{
+  width:240px;
+  height: 40px;
+  font-size: 20px;
+}
+.bttf{
+  
+  text-decoration: none;
+  color: #2b2b2b;
+}
