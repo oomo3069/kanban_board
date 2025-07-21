@@ -11,7 +11,9 @@ import tags from './routes/tag.routes';
 
 const app = express();
 dotenv.config();
-app.use(cors());
+
+app.use(cors({ origin: "https://your-frontend-url.onrender.com", credentials: true }));//อยู่ที่กลางใจอยู่ที่ใจกลาง
+
 app.use(express.json());
 
 
