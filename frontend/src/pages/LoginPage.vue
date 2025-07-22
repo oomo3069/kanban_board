@@ -1,6 +1,6 @@
 <template>
   <div class="containerlogin">
-  <p class="alert">*หมายเหตุ การLoginครั้งเเรกอาจใช้เวลานาน โปรดสักครู่หรือรีเว็บเเล้วกดใหม่</p>
+  <p class="alert">*หมายเหตุ การLoginครั้งเเรกอาจใช้เวลานาน โปรดรอสักครู่หรือรีเว็บเเล้วกดใหม่</p>
   <div class="login-form">
     <h2>LOGIN</h2>
     <form @submit.prevent="submit">
