@@ -1,6 +1,7 @@
 <template>
   <div class="containerlogin">
   <p class="alert">*หมายเหตุ การLoginหรือRegisterครั้งเเรกอาจใช้เวลานาน โปรดรอสักครู่(1นาที)หรือรีเว็บเเล้วกดใหม่</p>
+    <p class="alert">*Cloud database ของเว็บหมดอายุเมื่อ20ส.ค.68 จะเปิดระบบเพื่อนำเสนอเท่านั้น</p>
   <div class="login-form">
     <h2>LOGIN</h2>
     <form @submit.prevent="submit">
