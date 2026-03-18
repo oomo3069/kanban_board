@@ -29,7 +29,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
     }
     
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "10m" });
-    const resetLink = `https://kanban-board-chi-olive.vercel.app/reset-password/${token}`;
+    const resetLink = `https://kanban-board-eight-lyart.vercel.app/reset-password/${token}`;
 
 
     await transporter.sendMail({
