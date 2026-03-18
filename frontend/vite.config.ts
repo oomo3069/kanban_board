@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'http://localhost:5555', // เปลี่ยนเป็น URL ของ backend
         changeOrigin: true,
         secure: false,
       },

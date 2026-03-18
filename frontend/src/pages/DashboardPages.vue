@@ -10,24 +10,24 @@
         <button class="noti-btn" @click="toggleNotiPanel">🔔</button>
       </div>
     </div>
-    <button @click="logout"><p>LOGOUT</p></button>
+    <button @click="logout">
+      <p>LOGOUT</p>
+    </button>
 
     <!-- Grid -->
     <div class="board-grid">
-      <router-link
-        v-for="board in boards"
-        :key="board.id"
-        :to="`/boards/${board.id}`"
-        class="board-card"
-        tag="div"
-      >
-        <h3>{{ board.name }}</h3>
-        <p>{{ board.description }}</p>
+
+      <div v-for="board in boards" :key="board.id" class="board-card">
+        <router-link :to="`/boards/${board.id}`" class="board-link" tag="div">
+          <h3>{{ board.name }}</h3>
+          <p>{{ board.description }}</p>
+        </router-link>
+
         <div v-if="board.owner_id === user.id" class="board-actions">
-          <button @click.stop="startEditBoard(board)">EDIT</button>
-          <button @click.stop="deleteBoard(board.id)">DELETE</button>
+          <button @click="startEditBoard(board)">EDIT</button>
+          <button @click="deleteBoard(board.id)">DELETE</button>
         </div>
-      </router-link>
+      </div>
     </div>
 
     <!-- Modal สร้างบอร์ด -->
@@ -57,17 +57,17 @@
       <h3>NOTIFICATION</h3>
       <button @click="toggleNotiPanel">❌</button>
     </div>
-<ul>
-  <li v-for="noti in notifications" :key="noti.id">
-    <div>
-      {{ noti.message }}
-      <template v-if="noti.type === 'invite'">
-        <button @click="acceptInvite(noti.id)">✅</button>
-        <button @click="rejectInvite(noti.id)">❌</button>
-      </template>
-    </div>
-  </li>
-</ul>
+    <ul>
+      <li v-for="noti in notifications" :key="noti.id">
+        <div>
+          {{ noti.message }}
+          <template v-if="noti.type === 'invite'">
+            <button @click="acceptInvite(noti.id)">✅</button>
+            <button @click="rejectInvite(noti.id)">❌</button>
+          </template>
+        </div>
+      </li>
+    </ul>
 
   </div>
 </template>
@@ -146,6 +146,7 @@ const markAsRead = async (id: number) => {
   await axios.put(`/notifications/${id}/read`);
   notifications.value = notifications.value.filter((n) => n.id !== id);
 };
+
 const acceptInvite = async (id: number) => {
   try {
     await axios.post(`/invite/accept/${id}`);

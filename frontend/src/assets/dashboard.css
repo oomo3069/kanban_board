@@ -64,12 +64,15 @@
     padding: 1rem;
     border-radius: 15px;
     max-width: 500px;
-    height: 350px;
+    height: auto;
     border: 1px solid #2b2b2b;
     text-decoration: none;
     color: #2b2b2b;
 }
-
+.board-link{
+    text-decoration: none;
+        color: inherit;
+}
 .board-card h3 {
     font-size: 30px;
 }

@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://kanban-board-jfe2.onrender.com/api", 
+  baseURL: "http://localhost:5555/api", 
 });
 
 instance.interceptors.request.use((config) => {
