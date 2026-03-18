@@ -12,8 +12,8 @@ import tags from './routes/tag.routes';
 const app = express();
 dotenv.config();
 
-// app.use(cors({ origin: "https://kanban-board-chi-olive.vercel.app", credentials: true }));
-app.use(cors());
+app.use(cors({ origin: "https://kanban-board-gamma-virid.vercel.app", credentials: true }));
+// app.use(cors());
 app.use(express.json());
 
 

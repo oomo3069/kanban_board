@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5555', // เปลี่ยนเป็น URL ของ backend
+        target: 'https://kanban-board-tbim.onrender.com',
         changeOrigin: true,
         secure: false,
       },
